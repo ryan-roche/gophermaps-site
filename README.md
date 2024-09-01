@@ -1,2 +1,2 @@
 # GopherMaps
-![337_2x_shots_so](https://github.com/user-attachments/assets/0b4438c8-701d-4a69-af4d-a28771426021)
+![4_2x_shots_so](https://github.com/user-attachments/assets/993829b5-233f-4db6-9876-21c0e6e8c848)
