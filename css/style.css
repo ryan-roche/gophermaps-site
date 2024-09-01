@@ -7,14 +7,26 @@
  * Kroc Camen, and the H5BP dev community and team.
  */
 
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+.dm-sans-font {
+            font-family: "DM Sans", system-ui;
+            font-optical-sizing: auto;
+            font-weight: 100;
+            font-style: normal;
+          }
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
 
 html {
-  color: #222;
+  color: #ffffff;
   font-size: 1em;
   line-height: 1.4;
+}
+
+body {
+  background-color: #111;
+  font-family: "DM Sans", system-ui
 }
 
 /*
