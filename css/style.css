@@ -7,6 +7,8 @@
  * Kroc Camen, and the H5BP dev community and team.
  */
 
+/* glassCard styling based on https://codepen.io/Kathleen-Garrity/pen/NWVroVX */
+
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
 .dm-sans-font {
@@ -52,7 +54,7 @@ main {
 }
 
 .logo {
-    height: 40px;
+    height: 50px;
     padding-top: 20px;
     padding-left: 20px;
 }
@@ -61,10 +63,15 @@ main {
     display: flex;
     flex-direction: row;
     align-items: center;
+    gap: 50px;
 }
 
 .lhs {
     width: 30vw;
+}
+
+.slogan {
+    padding-bottom: 10px
 }
 
 .mockup {
@@ -83,12 +90,26 @@ main {
     flex-direction: row;
     align-items: center;
     gap: 10px;
-    padding-top: 10px;
+    padding-top: 15px;
 }
 
 .badge {
     height: 40px;
     width: auto;
+}
+
+.glassCard {
+    max-width: 500px;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.cardContents {
+    margin: 20px;
 }
 
 /*
