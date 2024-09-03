@@ -49,20 +49,18 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: green;
 }
 
 .logo {
     height: 40px;
-    padding-top: 10px;
-    padding-left: 10px;
+    padding-top: 20px;
+    padding-left: 20px;
 }
 
 .hStack {
     display: flex;
     flex-direction: row;
     align-items: center;
-    background: red;
 }
 
 .lhs {
@@ -72,7 +70,6 @@ main {
 .mockup {
     display: flex;
     max-height: 500px;
-    background: blue;
 }
 
 .mockup img {
@@ -86,6 +83,7 @@ main {
     flex-direction: row;
     align-items: center;
     gap: 10px;
+    padding-top: 10px;
 }
 
 .badge {
