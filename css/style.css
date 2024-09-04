@@ -95,14 +95,35 @@ main {
 }
 
 .badge {
-    height: 40px;
+    height: 100%;
     width: auto;
+    filter: brightness(0.4) blur(2px);
+}
+
+.iosBadge, .droidBadge {
+    position: relative;
+    display: inline-block;
+    height: 40px;
+}
+
+.badgeOverlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    z-index: 2; /* Ensures it appears above the badge image */
+    pointer-events: none; /* Prevents interaction interference */
+    white-space: nowrap;
+    font-weight: bold;
 }
 
 .glassCard {
     max-width: 500px;
     background: rgba(255, 255, 255, 0.15);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.5);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     backdrop-filter: blur(18px);
     border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 10px;
@@ -111,6 +132,80 @@ main {
 
 .cardContents {
     margin: 20px;
+}
+
+/* Gradient blob stuff */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.gradient1 {
+    --size: 100vh;
+    --speed: 15;
+    --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
+
+    top: 5vh;
+    left: 20vh;
+
+    width: var(--size);
+    height: var(--size);
+    filter: blur(calc(var(--size) / 5));
+    background-image: linear-gradient(#7209b7, #4cc9f0);
+    animation: rotate var(--speed) var(--easing) alternate infinite;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+}
+
+.gradient2 {
+    --size: 90vh;
+    --speed: 12;
+    --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
+
+    bottom: -10vw;
+    right: 0;
+
+    width: var(--size);
+    height: var(--size);
+    filter: blur(calc(var(--size) / 5));
+    background-image: linear-gradient(#390CA1, #f44336);
+    animation: rotate var(--speed) var(--easing) alternate infinite;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+}
+
+.gradient3 {
+    --size: 50vh;
+    --speed: 10;
+    --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
+
+    top: 5vh;
+    right: 30vw;
+
+    width: var(--size);
+    height: var(--size);
+    filter: blur(calc(var(--size) / 5));
+    background-image: linear-gradient(#1e6091, #f4d35e);
+    animation: rotate var(--speed) var(--easing) alternate infinite;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+}
+
+.gradients {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    place-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.gradient1,
+.gradient2,
+.gradient3 {
+   position: absolute;
+   transition: all 0.25s ease-out;
 }
 
 /*
