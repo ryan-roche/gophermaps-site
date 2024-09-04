@@ -47,7 +47,7 @@ body {
 }
 
 main {
-    flex: 1;
+    flex: 1 1 auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -59,31 +59,42 @@ main {
     padding-left: 20px;
 }
 
-.hStack {
+.contentStack {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     gap: 50px;
-}
-
-.lhs {
-    width: 30vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    width: 100%;
 }
 
 .slogan {
     padding-bottom: 10px
 }
 
+.glassCard {
+    max-width: 500px;
+    min-width: 500px;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 10px;
+    padding: 10px;
+}
+
 .mockup {
-    display: flex;
-    max-height: 500px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-height: 70vh;
     filter: drop-shadow(0px 4px 16px rgba(31, 38, 135, 0.7));
 }
 
 .mockup img {
-    height: auto;
-    width: auto;
-    object-fit: contain;
+
 }
 
 .download-badges {
@@ -118,16 +129,6 @@ main {
     pointer-events: none; /* Prevents interaction interference */
     white-space: nowrap;
     font-weight: bold;
-}
-
-.glassCard {
-    max-width: 500px;
-    background: rgba(255, 255, 255, 0.15);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(18px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    border-radius: 10px;
-    padding: 10px;
 }
 
 .cardContents {
@@ -193,7 +194,7 @@ main {
 }
 
 .gradients {
-    position: absolute;
+    position: fixed;
     inset: 0;
     display: flex;
     place-content: center;
@@ -206,6 +207,32 @@ main {
 .gradient3 {
    position: absolute;
    transition: all 0.25s ease-out;
+}
+
+@media (max-width: 1000px) {
+    .contentStack {
+        flex-direction: column;
+        padding-top: 20px;
+        padding-left: 5vw;
+        padding-right: 5vw;
+        width: 100%;
+    }
+
+    .glassCard {
+        left: auto;
+        min-width: auto;
+    }
+
+    .mockup {
+        right: auto;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .contentStack > * {
+        flex: 1 1 auto;
+    }
 }
 
 /*
