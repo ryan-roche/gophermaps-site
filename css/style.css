@@ -46,6 +46,10 @@ body {
     flex-direction: column;
 }
 
+header {
+    z-index: 100;
+}
+
 main {
     flex: 1 1 auto;
     display: flex;
@@ -60,6 +64,7 @@ main {
 }
 
 .contentStack {
+    display: -webkit-flex;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -67,7 +72,6 @@ main {
     gap: 50px;
     padding-left: 5vw;
     padding-right: 5vw;
-    width: 100%;
 }
 
 .slogan {
@@ -75,8 +79,7 @@ main {
 }
 
 .glassCard {
-    max-width: 500px;
-    min-width: 500px;
+    height: auto;
     background: rgba(255, 255, 255, 0.15);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     backdrop-filter: blur(18px);
@@ -86,15 +89,14 @@ main {
 }
 
 .mockup {
+    flex: 0 1 auto;
+    max-height: 70vh;
     width: 100%;
+    min-width: 0;
     height: auto;
     object-fit: contain;
-    max-height: 70vh;
     filter: drop-shadow(0px 4px 16px rgba(31, 38, 135, 0.7));
-}
-
-.mockup img {
-
+    background: green;
 }
 
 .download-badges {
@@ -205,8 +207,8 @@ main {
 .gradient1,
 .gradient2,
 .gradient3 {
-   position: absolute;
-   transition: all 0.25s ease-out;
+    position: absolute;
+    transition: all 0.25s ease-out;
 }
 
 @media (max-width: 1000px) {
@@ -220,7 +222,7 @@ main {
 
     .glassCard {
         left: auto;
-        min-width: auto;
+        width: 100%
     }
 
     .mockup {
@@ -232,6 +234,12 @@ main {
 
     .contentStack > * {
         flex: 1 1 auto;
+    }
+
+    .download-badges {
+        width: 100%;
+        flex-direction: column;
+        align-items: baseline;
     }
 }
 
