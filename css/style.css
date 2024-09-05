@@ -152,7 +152,7 @@ main {
     --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
 
     top: 5vh;
-    left: 20vh;
+    left: 10vw;
 
     width: var(--size);
     height: var(--size);
