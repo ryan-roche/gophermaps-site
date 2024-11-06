@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Gopher Maps</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            background-color: #f5f5f7;
+        }
+        .container {
+            max-width: 600px;
+            padding: 40px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #1d1d1f;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #515154;
+            margin-bottom: 30px;
+        }
+        .loading {
+            width: 40px;
+            height: 40px;
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #007AFF;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .store-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+        }
+        .store-button {
+            display: inline-block;
+            transition: transform 0.2s;
+        }
+        .store-button:hover {
+            transform: scale(1.05);
+        }
+        .store-button img {
+            height: 48px;
+            border-radius: 8px;
+        }
+        .coming-soon {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+        @media (min-width: 480px) {
+            .store-buttons {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Download GopherMaps</h1>
+    <div id="mobile-content">
+        <p>Redirecting you to the app store...</p>
+        <div class="loading"></div>
+    </div>
+    <div id="desktop-content" style="display: none;">
+        <p>Get GopherMaps on your mobile device:</p>
+        <div class="store-buttons">
+            <a href="https://apps.apple.com/us/app/gophermaps/id6670770853" class="store-button" target="_blank">
+                <img src="/img/app-store-badge.svg" alt="Download on the App Store">
+            </a>
+            <a class="store-button coming-soon">
+                <img src="/img/google-play-badge.png" alt="Get it on Google Play">
+            </a>
+        </div>
+        <p style="font-size: 0.9em; margin-top: 20px;">Android version coming soon!</p>
+    </div>
+</div>
+
+<script>
+    // Function to detect iOS
+    function isIOS() {
+        return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    }
+
+    // Function to detect Android
+    function isAndroid() {
+        return /Android/.test(navigator.userAgent);
+    }
+
+    // Wait for page to load
+    window.onload = function() {
+        // Your App Store URL
+        const appStoreUrl = 'https://apps.apple.com/us/app/gophermaps/id6670770853';
+        // Your Google Play URL (for future use)
+        const playStoreUrl = 'https://play.google.com/store/apps/your-play-store-url';
+
+        const mobileContent = document.getElementById('mobile-content');
+        const desktopContent = document.getElementById('desktop-content');
+
+        // Determine which store to redirect to
+        if (isIOS()) {
+            mobileContent.style.display = 'block';
+            desktopContent.style.display = 'none';
+            window.location.href = appStoreUrl;
+        } else if (isAndroid()) {
+            mobileContent.style.display = 'block';
+            desktopContent.style.display = 'none';
+            document.querySelector('#mobile-content p').textContent = 'Android version coming soon!';
+            document.querySelector('.loading').style.display = 'none';
+        } else {
+            // For desktop devices, show both options
+            mobileContent.style.display = 'none';
+            desktopContent.style.display = 'block';
+        }
+    };
+</script>
+</body>
+</html>
