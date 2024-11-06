@@ -157,9 +157,12 @@ a:link, a:active, a:visited {
     padding-top: 15px;
 }
 
-.badge {
+.badge, .inactiveBadge {
     height: 100%;
     width: auto;
+}
+
+.inactiveBadge {
     filter: brightness(0.4) blur(2px);
 }
 
