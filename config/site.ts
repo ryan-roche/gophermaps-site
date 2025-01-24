@@ -1,8 +1,8 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Next.js + HeroUI",
-  description: "Make beautiful websites regardless of your design experience.",
+  name: "GopherMaps",
+  description: "An interactive map for the Gopher Way.",
   leftNavItems: [
     {
       label: "Home",
@@ -24,7 +24,7 @@ export const siteConfig = {
     },
     {
       label: "Privacy Policy",
-      href: "/privacy-policy",
+      href: "/privacy",
     },
   ],
   links: {
