@@ -28,7 +28,6 @@ export const siteConfig = {
     },
   ],
   links: {
-    appStore: "https://apps.apple.com/us/app/gophermaps/id6670770853",
     socialCoding: "https://socialcoding.net",
   },
 };

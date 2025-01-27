@@ -1,11 +1,5 @@
 import * as React from "react";
-
-import gopherMapsIcon from '../public/icon-white.svg';
-
-import {
-  IconProps,
-  IconSvgProps
-} from "@/types";
+import { IconProps, IconSvgProps } from "@/types";
 
 export const Logo = ({ size = 24 }: IconProps) => {
   return (
