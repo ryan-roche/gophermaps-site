@@ -1,4 +1,7 @@
-import { DM_Sans as FontMono, Inter as FontSans } from "next/font/google";
+import {
+  Source_Code_Pro as FontMono,
+  DM_Sans as FontSans,
+} from "next/font/google";
 
 export const fontSans = FontSans({
   subsets: ["latin"],
