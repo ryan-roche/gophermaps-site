@@ -11,11 +11,13 @@ export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
 
   return (
-    <HeroUIProvider navigate={router.push}>
-      <NextThemesProvider forcedTheme={"dark"}>
-        <Component {...pageProps} />
-      </NextThemesProvider>
-    </HeroUIProvider>
+    <main className={`${fontSans.variable} ${fontMono.variable}`}>
+      <HeroUIProvider navigate={router.push}>
+        <NextThemesProvider forcedTheme={"dark"}>
+          <Component {...pageProps} />
+        </NextThemesProvider>
+      </HeroUIProvider>
+    </main>
   );
 }
 
