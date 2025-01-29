@@ -104,7 +104,7 @@ export default function AboutPage() {
                 {person.contributions}
                 <Divider />
                 {/* Links */}
-                <div className={"flex flex-row gap-1.5"}>
+                <div className={"flex flex-row justify-center gap-1.5"}>
                   {person.links?.GitHub && (
                     <Button isExternal isIconOnly aria-label={`GitHub link for ${person.name}`} as={Link} href={person.links.GitHub}>
                       <GithubIcon />
