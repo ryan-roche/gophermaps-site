@@ -9,6 +9,8 @@ export const Head = () => {
       <title>{siteConfig.name}</title>
       <meta key="title" content={siteConfig.name} property="og:title" />
       <meta content={siteConfig.description} property="og:description" />
+      <meta content="https://gophermaps.xyz/og.png" property="og:image" />
+      <meta content="website" property="og:type" />
       <meta content={siteConfig.description} name="description" />
       <meta
         key="viewport"
