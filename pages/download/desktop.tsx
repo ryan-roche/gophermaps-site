@@ -3,7 +3,7 @@ import { Image } from "@heroui/image";
 
 import { subtitle, title } from "@/components/primitives";
 import DefaultLayout from "@/layouts/default";
-import { appCodes } from "./appCodes";
+import { appCodes } from "../../components/appCodes";
 import { Link } from "@heroui/link";
 
 export default function DesktopDownloadPage() {

@@ -5,7 +5,7 @@ import { Divider } from "@heroui/divider";
 import { Button } from "@heroui/button";
 import { Image } from "@heroui/image";
 import { Link } from "@heroui/link";
-import { contributors } from "@/pages/about/contributors";
+import { contributors } from "@/components/contributors";
 import {
   BookIcon,
   GithubIcon,
@@ -66,7 +66,9 @@ export default function AboutPage() {
                   Visit Social Coding
                 </Button>
                 <Button
+                  as={Link}
                   className={"bg-gray-500"}
+                  href={"https://sua.umn.edu/student-group-policies"}
                   startContent={<BookIcon />}
                   variant={"shadow"}
                 >

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import DefaultLayout from "@/layouts/default";
 import { title, subtitle } from "@/components/primitives";
 import { Spinner, SpinnerProps } from "@heroui/spinner";
-import { appCodes } from "./appCodes";
+import { appCodes } from "../../components/appCodes";
 
 export default function MobileDownloadPage() {
   const [deviceType, setDeviceType] = useState("unknown");
