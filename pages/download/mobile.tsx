@@ -8,7 +8,8 @@ export default function MobileDownloadPage() {
   const [deviceType, setDeviceType] = useState("unknown");
   const [hasChecked, setHasChecked] = useState<boolean>(false);
   const [spinnerMessage, setSpinnerMessage] = useState("Checking device type...");
-  const [spinnerType, setSpinnerType] = useState<SpinnerProps['color']>("primary");
+  type SpinnerColors = "danger" | "warning" | "success" | "primary";
+  const [spinnerType, setSpinnerType] = useState<SpinnerColors>("primary");
 
   useEffect(() => {
     // Get userAgent string
