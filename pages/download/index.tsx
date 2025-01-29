@@ -6,7 +6,7 @@ import DefaultLayout from "@/layouts/default";
 import { appCodes } from "./appCodes";
 import { Link } from "@heroui/link";
 
-export default function DocsPage() {
+export default function DesktopDownloadPage() {
   return (
     <DefaultLayout>
       {/* Page Title */}
