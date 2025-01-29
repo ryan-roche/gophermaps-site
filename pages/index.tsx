@@ -22,7 +22,7 @@ export default function IndexPage() {
             An interactive map for the Gopher Way
           </div>
         </div>
-        <Image className={""} src={"/mockups/multi.png"} />
+        <Image className={"object-fit max-h-1/2 w-auto"} src={"/mockups/multi.png"} />
       </section>
     </DefaultLayout>
   );
