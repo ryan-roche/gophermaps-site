@@ -1,12 +1,8 @@
-import { Link } from "@heroui/link";
-import { Snippet } from "@heroui/snippet";
-import { Code } from "@heroui/code";
-import { button as buttonStyles } from "@heroui/theme";
-import { Image } from "@heroui/image";
-
-import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
 import DefaultLayout from "@/layouts/default";
+import { Button } from "@heroui/button";
+import { Image } from "@heroui/image";
+import { Link } from "@heroui/link";
 
 export default function IndexPage() {
   return (
@@ -23,6 +19,9 @@ export default function IndexPage() {
           </div>
         </div>
         <Image className={""} src={"/mockups/multi.png"} />
+        <Button as={Link} href={"/download"} className={"md:hidden mt-8"} color={"primary"}>
+          Download
+        </Button>
       </section>
     </DefaultLayout>
   );
