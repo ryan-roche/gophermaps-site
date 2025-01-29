@@ -5,16 +5,16 @@ import { Button } from "@heroui/button";
 import { GithubIcon, MailIcon } from "@/components/icons";
 import { Link } from "@heroui/link";
 
-export default function DocsPage() {
+export default function SupportPage() {
   return (
     <DefaultLayout>
-      <section className="flex flex-col items-center justify-center gap-4 py-2">
+      <section className="flex flex-col items-center justify-center gap-4">
         {/* Page title */}
-        <div className="inline-block text-center justify-center">
-          <h1 className={title()}>Support</h1>
+        <div className="inline-block text-center justify-center pb-8">
+          <h1 className={title({ size: "lg" })}>Support</h1>
         </div>
         {/* Cards */}
-        <div className={"flex flex-col items-center gap-8 py-16"}>
+        <div className={"flex flex-col items-center gap-8"}>
           {/* Social Coding info */}
           <Card className={"sm:w-1/2"}>
             <CardBody className={"space-y-3"}>

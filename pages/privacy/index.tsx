@@ -3,7 +3,7 @@ import { Card, CardBody } from "@heroui/card";
 import { title, subtitle } from "@/components/primitives";
 import DefaultLayout from "@/layouts/default";
 
-export default function DocsPage() {
+export default function PrivacyPage() {
   return (
     <DefaultLayout>
       <section className="flex flex-col items-center justify-center gap-4 py-2">
