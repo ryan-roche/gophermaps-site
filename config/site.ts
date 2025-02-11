@@ -23,6 +23,10 @@ export const siteConfig = {
       href: "/support",
     },
     {
+      label: "Status",
+      href: "/status",
+    },
+    {
       label: "Privacy Policy",
       href: "/privacy",
     },
